@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.bg {
+    background: url('https://transporter.techvrm.com/SignUpAssets/img/backgrounds/1@2x.jpg') no-repeat center;
+    background-size: cover;
+    
+    min-height: 100vh;
+}
+
+.box {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 30%;
+}
+
+.box img {
+    width: 120px;
+    height: 120px;
+
+    pointer-events: none;
+}
+
+.box input {
+    display: block;
+    outline: none;
+
+    margin: 8px auto;
+    padding: 8px;
+
+    width: 80%;
+    
+    border-radius: 40px;
+    border: 1px solid transparent;
+
+    transition: .4s;
+}
+
+.box input:focus {
+    border: 1px solid rgba(255, 0, 0, .6);
+}
+
+.box button {
+    display: block;
+    outline: none;
+    cursor: pointer;
+    
+    margin: auto;
+    margin-top: 20px;
+
+    padding: 8px;
+    
+    width: 40%;
+
+    background-color: rgba(0, 0, 0, .7);
+    color: #fff;
+
+    border: none;
+    border-radius: 40px;
+
+    transition: .4s;
+}
+
+.box button:disabled {
+    pointer-events: none;
+    background-color: rgba(255, 255, 255, .4);
+}
+
+.box button:hover {
+    width: 45%;
+    background-color:rgba(0, 0, 0, .9);
+}
+
+.box i {
+    cursor: pointer;
+
+    font-size: 2rem;
+    margin: 0 10px;
+    padding-top: 40px;
+
+    transition: .4s;
+}
+
+.box i:nth-child(1) {
+    color: #cd486b;
+    text-shadow: 1px 1px 4px #000;
+}
+
+.box i:nth-child(2) {
+    color: #222;
+    text-shadow: 1px 1px 3px #000;
+}
+
+.box i:nth-child(3) {
+    color: #7289da;
+    text-shadow: 1px 1px 4px #000;
+}
+
+.box i:hover {
+    animation: animate .7s;
+}
+
+/**
+  * Animation
+ */
+@keyframes animate {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/**
+  * Responsive
+ */
+@media screen and (max-height: 640px) {
+    .box {
+        width: 70%;
+    }
+}
